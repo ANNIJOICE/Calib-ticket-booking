@@ -1,0 +1,61 @@
+<div *ngIf="!bookticket()">
+    <button (click)="bookTicket()" mat-button color="primary">Book Bus ticket</button>
+</div>
+
+<div *ngIf="bookticket()" class="seat-container">
+
+    <div class="seat-row">
+        <div *ngFor="let seat of ticketDetails()">
+            <div *ngIf="seat.row === 1" [ngClass]="[seat.seatNo === 2 ? 'divide' : '']" >
+                <input class="check seat" type="checkbox" [id]="seat.seatNo" [disabled]="seat.status === 'booked'" [name]="seat.seatNo" (change)="selectedSeat($event, seat.seatNo)" value="{{seat.seatNo}}" [ngClass]="[seat.seatNo === 2 ? 'divide' : '', seat.status === 'booked' ? 'booked' : '']"/>
+                <label [for]="seat.seatNo" class="lab seat-label" >
+                    {{seat.seatNo}}
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="seat-row">
+        <div *ngFor="let seat of ticketDetails()">
+            <div *ngIf="seat.row === 2" [ngClass]="[seat.seatNo === 7 ? 'divide' : '']" >
+                <input class="check seat" type="checkbox" [id]="seat.seatNo" [disabled]="seat.status === 'booked'" [name]="seat.seatNo" (change)="selectedSeat($event, seat.seatNo)" value="{{seat.seatNo}}" [ngClass]="[seat.seatNo === 2 ? 'divide' : '', seat.status === 'booked' ? 'booked' : '']"/>
+                <label [for]="seat.seatNo" class="lab seat-label" >
+                    {{seat.seatNo}}
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="seat-row">
+        <div *ngFor="let seat of ticketDetails()">
+            <div *ngIf="seat.row === 3" [ngClass]="[seat.seatNo === 12 ? 'divide' : '']" >
+                <input class="check seat" type="checkbox" [id]="seat.seatNo" [disabled]="seat.status === 'booked'" [name]="seat.seatNo" (change)="selectedSeat($event, seat.seatNo)" value="{{seat.seatNo}}" [ngClass]="[seat.seatNo === 2 ? 'divide' : '', seat.status === 'booked' ? 'booked' : '']"/>
+                <label [for]="seat.seatNo" class="lab seat-label" >
+                    {{seat.seatNo}}
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="seat-row">
+        <div *ngFor="let seat of ticketDetails()">
+            <div *ngIf="seat.row === 4" [ngClass]="[seat.seatNo === 17 ? 'divide' : '']" >
+                <input class="check seat" type="checkbox" [id]="seat.seatNo" [disabled]="seat.status === 'booked'" [name]="seat.seatNo" (change)="selectedSeat($event, seat.seatNo)" value="{{seat.seatNo}}" [ngClass]="[seat.seatNo === 2 ? 'divide' : '', seat.status === 'booked' ? 'booked' : '']"/>
+                <label [for]="seat.seatNo" class="lab seat-label" >
+                    {{seat.seatNo}}
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="seat-row">
+        <div *ngFor="let seat of ticketDetails()">
+            <div *ngIf="seat.row === 5" [ngClass]="[seat.seatNo === 22 ? 'divide' : '']" >
+                <input class="check seat" type="checkbox" [id]="seat.seatNo" [disabled]="seat.status === 'booked'" [name]="seat.seatNo" (change)="selectedSeat($event, seat.seatNo)" value="{{seat.seatNo}}" [ngClass]="[seat.seatNo === 2 ? 'divide' : '', seat.status === 'booked' ? 'booked' : '']"/>
+                <label [for]="seat.seatNo" class="lab seat-label" >
+                    {{seat.seatNo}}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

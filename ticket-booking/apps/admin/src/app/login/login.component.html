@@ -1,0 +1,20 @@
+<div class="login-form-center">
+    <header>User Login</header>
+    <form (ngSubmit)="logIn()" [formGroup]="loginForm">
+        <div>
+            <mat-label>UserName</mat-label>
+            <mat-form-field appearance="outline" class="w-100 mb-16">
+                <input matInput name="email" autocomplete="off" required formControlName="name"/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-label>Password</mat-label>
+            <mat-form-field appearance="outline" class="w-100 mb-16">
+                <input matInput name="password" autocomplete="off" required formControlName="password"/>
+            </mat-form-field>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</div>
