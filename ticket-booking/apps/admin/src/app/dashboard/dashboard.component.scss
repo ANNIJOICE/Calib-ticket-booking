@@ -1,0 +1,73 @@
+.seat {
+    margin: 3px;
+    border: 1px solid grey;
+    padding: 5px;
+    width: 10px;
+    white-space: nowrap;
+}
+
+.seat-row{
+    display: flex;
+    padding: 3px;
+}
+
+.seat-gap {
+    padding: 5px;
+}
+
+.divide {
+    margin-right: 10px;
+}
+
+.seat-container {
+    margin: auto;
+    width: 50%;
+}
+
+
+.seat-label{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.booked {
+    background-color: gray;
+}
+
+.available {
+    background-color: green;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+// input[type="checkbox"]:disabled {
+//     background-color: gray;
+// }
+
+
+.lab {
+    margin: 3px;
+    border: 1px solid grey;
+    padding: 5px;
+    width: 10px;
+    white-space: nowrap;
+}
+
+input[type="checkbox"] {
+    &:checked {
+        & ~ .lab {
+            background-color: red;
+        }
+    }
+
+    &:disabled {
+        & ~ .lab {
+            background-color: gray;
+        } 
+    }
+}
